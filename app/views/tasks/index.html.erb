@@ -6,12 +6,12 @@
   <div class="task">
     <ul class="list-group list-group-flush">
       <% @tasks.each do |task| %>
-      <li class="list-group-item"><%= link_to task.title, show_path(task.id) %></li>
+        <li class="list-group-item"><%= link_to task.title, task_path(task.id) %></li>
       <% end %>
     </ul>
 
     <div class="add border-top pt-3">
-      <p class="button-action"><i class="fa-solid fa-plus"></i> <%= link_to "Ajoutez une tache", new_path %></p>
+      <p class="button-action"><i class="fa-solid fa-plus"></i> <%= link_to "Ajoutez une tache", tasks_new_path %></p>
     </div>
   </div>
 </div>
