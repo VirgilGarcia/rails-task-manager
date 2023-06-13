@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="title">
+    <h1><%= @tasks.title %></h1>
+  <div>
+
+  <div class="bg-light bg-gradient card mb-3 p-3">
+    <p><%= @tasks.details %></p>
+    <% if @tasks.completed === true %>
+      <p class="button-action"><span class="true"><i class="fa-solid fa-check"></i></span> | Tache validé</p>
+    <% else %>
+      <p class="button-action"><span class="false">X</span> | Tache non complétée</p>
+    <% end %>
+  </div>
+
+  <div class="border-top pt-3 d-flex gap-5">
+    <p class="button-action"><i class="fa-solid fa-pen-to-square"></i> <%= link_to "Editez", edit_path %></p>
+    <p class="button-action"><i class="fa-solid fa-trash-can"></i> <%= link_to "Supprimer", delete_path %></p>
+    <p class="button-action"><i class="fa-solid fa-rotate-left"></i> <%= link_to "Retour", task_path %></p>
+  </div>
+</div>
